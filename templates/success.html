@@ -1,0 +1,48 @@
+
+<html>
+<head>
+    <title>Success</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+<div class="flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-2xl p-4 bg-white shadow-2xl dark:bg-gray-900 sm:p-10 sm:rounded-3xl">
+        <div class="text-center">
+            <!-- Success Icon -->
+            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-6 bg-green-100 rounded-full dark:bg-green-700">
+                <svg class="h-12 w-12 text-green-600 dark:text-green-100" xmlns="http://www.w3.org/2000/svg" fill="none" 
+                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+            </div>
+
+            <!-- Success Messages -->
+            <h1 class="text-4xl font-extrabold text-green-700 dark:text-green-400 mb-4">
+                File Uploaded Successfully!
+            </h1>
+            
+            <div class="space-y-4 text-lg text-gray-800 dark:text-gray-300">
+                <p>File Name: <span class="font-semibold text-blue-600">{{name}}</span></p>
+                <p>Do you want to extract pages from 
+                    <span class="font-semibold text-blue-600">{{start}}</span> to 
+                    <span class="font-semibold text-blue-600">{{end}}</span>?
+                </p>
+            </div>
+
+            <!-- Extract Button -->
+            <form method="get" action="/convert" class="mt-8">
+                <button type="submit" 
+                        class="inline-block px-8 py-3 text-lg font-medium text-white transition-transform 
+                               rounded-lg shadow-lg bg-gradient-to-r from-blue-600 to-indigo-600 
+                               hover:scale-105 hover:from-blue-700 hover:to-indigo-700 
+                               dark:from-blue-500 dark:to-indigo-500 
+                               dark:hover:from-blue-600 dark:hover:to-indigo-600">
+                    Extract Now!
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

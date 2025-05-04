@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>PDF Splitter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-200 min-h-screen flex items-center">
+<div class="w-full">
+    <div class="bg-white p-10 rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
+        <h1 class="text-center text-blue-500 font-bold text-2xl uppercase mb-6">PDF SPLITTER</h1>
+        
+        <form action="/success" method="post" enctype="multipart/form-data" class="space-y-6">
+            <!-- Start Page Input -->
+            <div class="mb-5">
+                <label for="start" class="block mb-2 font-bold text-gray-600">Start Page</label>
+                <input type="text" id="start" name="start" required 
+                    class="border border-gray-300 shadow p-3 w-full rounded"
+                    placeholder="Enter start page number">
+            </div>
+
+            <!-- End Page Input -->
+            <div class="mb-5">
+                <label for="end" class="block mb-2 font-bold text-gray-600">End Page</label>
+                <input type="text" id="end" name="end" required 
+                    class="border border-gray-300 shadow p-3 w-full rounded"
+                    placeholder="Enter end page number">
+            </div>
+
+            <!-- File Upload -->
+            <div class="mb-5">
+                <label class="block mb-2 font-bold text-gray-600">Choose PDF File</label>
+                <div class="border border-gray-300 shadow p-3 w-full rounded">
+                    <input type="file" name="file" required 
+                        class="w-full file:mr-4 file:py-2 file:px-4
+                            file:rounded file:border-0
+                            file:text-sm file:font-semibold
+                            file:bg-blue-50 file:text-blue-700
+                            hover:file:bg-blue-100">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" 
+                class="block w-full bg-blue-500 hover:bg-blue-600 text-white font-bold p-4 rounded-lg transition-colors">
+                Upload & Split PDF
+            </button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
